@@ -4,7 +4,7 @@ import comite.*
 
 object raqueta {
   method costoElemento(deportista) {
-    (100*deportista.edadDeportista()).max(3000)
+    (100*deportista.edadDeportista()).min(3000)
   }
 }
 
