@@ -6,7 +6,7 @@ object victoria {
   var edad = 23
   var altura = 150
   var disciplina = tenis
-  var elemento = trajeJudo  // ← sacar el null, poner un valor inicial
+  var elemento = trajeJudo 
   var entrenadores = 0
 
   method edadDeportista() = edad
