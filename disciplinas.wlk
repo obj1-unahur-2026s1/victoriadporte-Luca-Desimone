@@ -1,30 +1,27 @@
 import elementos.*
 
 
-object tenis {
-    var hinchas = 5
-  method presupuesto() {
-    200 + 3*hinchas
-  }
-
-  method cantHinchas(cantHinchas) {
-    hinchas = cantHinchas
-  }
-
-  method elementoIndispensable() = raqueta 
+object judo {
+  var medallas = 3
+  method presupuesto() = 160 * medallas       
+  method elementoIndispensable() = trajeJudo
 }
 
-object judo {
-var medallas = 3
+object tenis {
+  var hinchas = 5
+  method presupuesto() = 200 + 3 * hinchas       
+  method elementoIndispensable() = raqueta
+}
+
+object hockey {
+var años = 2 
 
 
-  method presupuesto() {
-    160*medallas
+  method presupuesto() = 140+años
+
+  method cantAños(cantAños) {
+    años = cantAños
   }
 
-  method cantMedallas(cantMedallas) {
-    medallas = cantMedallas
-  }
-
-  method elementoIndispensable() = trajeJudo 
+  method elementoIndispensable() = paloHockey 
 }

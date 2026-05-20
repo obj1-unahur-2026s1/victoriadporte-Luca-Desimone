@@ -1,9 +1,31 @@
-import example.pepita
+import deportistas.*
+import disciplinas.*
+import elementos.*
 
-describe "group of tests for pepita" {
+describe "presupuesto de victoria" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "caso Pareto: judo, 150cm, 4 entrenadores" {
+    victoria.cambiarAltura(150)
+    victoria.cambiarDisciplina(judo)
+    victoria.cambiarElemento(trajeJudo)
+    victoria.cambiarEntrenadores(4)
+    assert.equals(11980, victoria.presupuestoTotal())
+  }
+
+  test "caso Delpo: tenis, 210cm, 2 entrenadores" {
+    victoria.cambiarAltura(210)
+    victoria.cambiarDisciplina(tenis)
+    victoria.cambiarElemento(raqueta)
+    victoria.cambiarEntrenadores(2)
+    assert.equals(4515, victoria.presupuestoTotal())
+  }
+
+  test "victoria agarra la raqueta para practicar judo" {
+    victoria.cambiarAltura(150)
+    victoria.cambiarDisciplina(judo)
+    victoria.cambiarElemento(raqueta)
+    victoria.cambiarEntrenadores(4)
+    assert.equals(6780, victoria.presupuestoTotal())
   }
 
 }
